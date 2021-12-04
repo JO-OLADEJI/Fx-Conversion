@@ -37,7 +37,7 @@ contract FxConversion {
   function getEurJpy() public view returns(uint256) {
     uint256 eurUsd = getEurUsd();
     uint256 usdJpy = getUsdJpy();
-    return (eurUsd * usdJpy);
+    return ((eurUsd * usdJpy) / (10 ** 8));
   }
 
   function getEurGbp() public view returns(uint256) {
@@ -49,7 +49,7 @@ contract FxConversion {
   function getGbpJpy() public view returns(uint256) {
     uint256 gbpUsd = getGbpUsd();
     uint256 usdJpy = getUsdJpy();
-    return (gbpUsd * usdJpy);
+    return ((gbpUsd * usdJpy) / (10 ** 8));
   }
 
 }
